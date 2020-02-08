@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		*{
+			box-sizing:border-box;
+			font-family: Palatino;
+		}
+
+		#hero{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			height:100vh;
+			background: url(img/hero.jpg);
+			background-size:cover;
+		}
+
+		@keyframes bob{
+			0%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+
+		#herocontent{
+			animation:bob 2s linear 1;
+			background:rgba(0,0,0, .5);
+			max-width:400px;
+			padding:20px;
+			color:#fff;
+		}
+
+		.btn{
+			display:block;
+			background:#f00;
+			color:#fff;
+			text-decoration: none;
+			font-size:20px;
+			padding:10px;
+			text-align: center;
+			border-radius: 20px;
+		}
+		
+		@keyframes sam{
+			0%{
+				background:#f00;
+				color:#fff;
+				transform:scale(1,1);
+			}
+			50%{
+				background:#fff;
+				color:#f00;
+				transform:scale(.75,.75);
+			}
+			100%{
+				background:#f00;
+				color:#fff;
+				transform:scale(1,1);
+			}
+		}
+		
+		
+		.btn:hover{
+			animation: sam 2s linear infinite;
+			color:#f00;
+			background:#fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="hero">
+		<div id="herocontent">
+			<h1>Headline</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+			incididunt ut labore et dolore magna aliqua.</p>
+			<p><a href="#" class="btn">Register Today</a></p>
+		</div>
+	</div>
+</body>
+</html>
